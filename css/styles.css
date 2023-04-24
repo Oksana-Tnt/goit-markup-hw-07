@@ -384,15 +384,14 @@ margin: 0;
 {  
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;    
-
-    @media screen and (min-width: 480px) {
+    margin: 0 auto;  
+    
     --items: 2;   
     --indent: 16px;  
     row-gap: 72px;
     column-gap: 16px;     
         
-    }
+ 
     @media screen and (min-width: 768px) {
         --items: 3;
         --indent: 24px;
@@ -409,11 +408,10 @@ margin: 0;
 
 .customer-card{     
 
-    @media screen and (min-width: 480px) 
-   {
+   
      width: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
    
-   }
+ 
    
    }
 
