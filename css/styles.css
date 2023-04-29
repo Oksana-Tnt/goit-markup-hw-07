@@ -201,6 +201,7 @@ margin: 0;
 .header {
    
     position: fixed;
+    z-index: 999;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -554,6 +555,19 @@ margin: 0;
     color: var(--color-slate);
 } 
 
+.title {
+    margin-bottom: 72px;
+    text-align: center;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+
+    color: var(--color-navy-blue);
+}
+
 /**
   |============================
   | section hero
@@ -640,46 +654,65 @@ margin: 0;
 
 /**
   |============================
-  | Card-set
+  | Card set
   |============================
 */
+
 .features-list,
 .team-list {
-    @media screen and (min-width: 768px) {
-        --items: 2;      
-        
+   
+    
+    @media screen and (min-width: 768px){
+        --items: 2;
+        width: 768px;
     }
+
     @media screen and (min-width: 1200px) {
         --items: 4;
+        width: 1200px;
     }
 }
 
-
+.portfolio-list {
+    @media screen and (min-width: 768px) {
+            --items: 2;
+            width: 768px;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            --items: 3;
+            width: 1200px;
+        }
+}
 
 .card-set {
 
-    @media screen and (min-width: 768px){
+       
+    @media screen and (min-width: 768px) {        
         display: flex;
         flex-wrap: wrap;
         margin: 0 auto;
-    
+        gap: var(--indent);        
     }
-    gap: var(--indent);
+
+   
 }
 
 
- .card-set-item{
-     @media screen and (min-width: 768px) 
-    {
+.card-set-item {
+    @media screen and (min-width: 768px) {
         width: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+        
     }
+
     &:not(:last-child) {
         @media screen and (max-width: 767px) {
-                margin-bottom: 72px;
-            }
+            margin-bottom: 72px;
         }
     }
-   
+}
+
+
 /**
   |============================
   | Section Works
@@ -687,24 +720,12 @@ margin: 0;
 */
 
 .section-work {
-    @media screen and (max-width: 1199px) {
-        display: none;
-    }
-
     padding-top: 0;
-}
 
-.title {
-    margin-bottom: 72px;
-    text-align: center;
-    
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.1;
-    letter-spacing: 0.02em;    
-    text-transform: capitalize;
+    @media screen and (max-width: 1199px) {
+            display: none;
+        }
 
-    color: var(--color-navy-blue);
 }
 
 /**
@@ -916,13 +937,12 @@ margin: 0;
     } 
     @media screen and (min-width: 1200px) 
     {
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 156px;
-        padding-right: 159px;
+        margin: 0 auto;
         flex-direction: row;
         flex-wrap: nowrap;        
         align-items: baseline;
+        padding: 0 30px;
+        width: 100%;
         gap: 120px;
     } 
    
@@ -1081,14 +1101,47 @@ color: var(--color-white);
 */
 
 .portfolio {
-    padding: 96px 120px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 64px;
+        padding-bottom: 96px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 100px;
+        padding-bottom: 120px;
+    }
 }
 
 .portfolio-filters {
     display: flex;
-    justify-content: center;
-    margin-bottom: 72px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 48px;
     gap: 24px;
+
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+        margin-bottom: 64px;
+    }
+
+     @media screen and (min-width: 1200px) {
+         justify-content: center;
+         margin-bottom: 72px;
+     }
+    
+}
+
+.portfolio-list .item {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 360px;
 }
 
 .portfolio-item {
@@ -1132,7 +1185,8 @@ color: var(--color-white);
 
 }
 
-.card-set-item:hover .product-description {
+.portfolio-item:hover .product-description,
+.portfolio-item:focus .product-description {
     transform: translateY(0);
 
 }
