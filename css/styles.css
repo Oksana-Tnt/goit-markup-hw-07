@@ -42,9 +42,10 @@ margin: 0;
 }
 
 .section {
-        width: 100%;
-        padding-top: 96px;
-        padding-bottom: 96px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+
+         
     
     @media screen and (min-width: 1200px) {
         padding-top: 120px;
@@ -55,7 +56,7 @@ margin: 0;
 
 
 .container {  
-   
+ 
     padding-left: 16px;
     padding-right: 16px;
 
@@ -660,28 +661,16 @@ margin: 0;
 .features-list,
 .team-list {
    
-    
+
     @media screen and (min-width: 768px){
         --items: 2;
-        width: 768px;
+       justify-content: center;
     }
 
     @media screen and (min-width: 1200px) {
         --items: 4;
-        width: 1200px;
+        justify-content: center;
     }
-}
-
-.portfolio-list {
-    @media screen and (min-width: 768px) {
-            --items: 2;
-            width: 768px;
-        }
-    
-        @media screen and (min-width: 1200px) {
-            --items: 3;
-            width: 1200px;
-        }
 }
 
 
@@ -703,7 +692,7 @@ margin: 0;
 
 .card-set-item {
     @media screen and (min-width: 768px) {
-        width: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+        flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
         
     }
 
@@ -722,8 +711,7 @@ margin: 0;
 */
 
 .section-work {
-    padding-top: 0;
-    width: 100%;
+    
     @media screen and (max-width: 1199px) {
             display: none;
         }
@@ -733,14 +721,14 @@ margin: 0;
     display: flex;
     justify-content: center;
     margin: 0 auto;
-   
+    padding: 0 156px;
     gap: 24px;
 }
-.works-list .item {
+/*.works-list .item {
     
     width: 360px;
     
-}
+}*/
 /**
   |============================
   | Section Team
@@ -748,21 +736,26 @@ margin: 0;
 */
 
 .section-team {
+    
     background-color: var(--color-cloud);
-    width: 100%;
-}
+ 
 
-.team-list {
-@media screen and (max-width: 1199px){
+    @media screen and (min-width: 768px){
+      
+        display: flex;
+    margin: 0 auto;
+    
     justify-content: center;
-   }
+       }
+    
+    }
 
-}
+
 
 .team-list .item {
     display: flex;
     flex-direction: column;
-   
+   justify-content: center;
     width: 265px;
     background-color: var(--color-white);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -774,6 +767,10 @@ margin: 0;
     }
 }
 
+.team-img {
+    display: flex;
+    margin: 0 auto;
+}  
 
 .team-card {
     padding: 32px 16px;
@@ -841,20 +838,14 @@ margin: 0;
 */
 
 .customers-section {
-    width: 100%;
+
     padding-top: 96px;
     padding-bottom: 96px;
-
-    @media screen and (min-width: 768px) {
-    padding-left: 108px;
-    padding-right: 108px;
-}
 
 @media screen and (min-width: 1200px) {
     padding-top: 120px;
     padding-bottom: 120px;
-    padding-left: 156px;
-    padding-right: 156px;
+    
 }
 }
 
@@ -862,9 +853,8 @@ margin: 0;
 {  
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;  
     justify-content: center;
-    
+    width: 100%;
     row-gap: 72px;
     column-gap: 16px;     
         
@@ -1166,18 +1156,51 @@ color: var(--color-white);
     
 }
 
-.portfolio-list .item {
+.portfolio-list {
     display: flex;
     flex-direction: column;
+    width: 396px;
+    justify-content: center;
     margin: 0 auto;
-    width: 360px;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+            --items: 2;
+            width: 768px;
+            justify-content: center;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            flex-direction: row;
+            --items: 3;
+            width: 1200px;
+        }
 }
+
+
+.portfolio-list .item {
+ @media screen and (min-width: 768px) {
+     flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+     
+ }
+
+ &:not(:last-child) {
+     @media screen and (max-width: 767px) {
+         margin-bottom: 48px;
+     }
+ }
+}
+
+
+
 
 .portfolio-item {
     outline: none;
     display: block;
+
     transition: box-shadow var(--duration) var(--function);
 }
+
 
 
 .portfolio-item:hover,
