@@ -604,7 +604,6 @@ margin: 0;
 }
 
 
-
 /**
   |============================
   | Section Features
@@ -638,7 +637,8 @@ margin: 0;
 
 .svg-icon {
     height: 112px;
-    padding: 24px 100px;
+    width: 264px;
+    
     margin-bottom: 8px;
     display: flex;
     align-items: center;
@@ -652,6 +652,7 @@ margin: 0;
     }
 }
 
+
 /**
   |============================
   | Card set
@@ -659,8 +660,7 @@ margin: 0;
 */
 
 .features-list,
-.team-list {
-   
+.team-list {  
 
     @media screen and (min-width: 768px){
         --items: 2;
@@ -670,12 +670,9 @@ margin: 0;
     @media screen and (min-width: 1200px) {
         --items: 4;
         justify-content: center;
+        
     }
 }
-
-
-
-
 .card-set {
 
        display: block;
@@ -683,12 +680,12 @@ margin: 0;
         display: flex;
         flex-wrap: wrap;
         margin: 0 auto;
-        gap: var(--indent);        
+        gap: var(--indent);  
+        justify-content: center;      
     }
 
    
 }
-
 
 .card-set-item {
     @media screen and (min-width: 768px) {
@@ -724,11 +721,11 @@ margin: 0;
     padding: 0 156px;
     gap: 24px;
 }
-/*.works-list .item {
+.works-list .item {
     
     width: 360px;
     
-}*/
+}
 /**
   |============================
   | Section Team
@@ -743,9 +740,9 @@ margin: 0;
     @media screen and (min-width: 768px){
       
         display: flex;
-    margin: 0 auto;
+        margin: 0 auto;
     
-    justify-content: center;
+        justify-content: center;
        }
     
     }
