@@ -610,6 +610,11 @@ margin: 0;
   |============================
 */
 
+.features-list .item {
+@media screen and (min-width: 1200px) {
+    flex-basis: 264px;
+}
+}
 
 .subtitle {
     margin-top: 0;
@@ -651,6 +656,7 @@ margin: 0;
         display: none;
     }
 }
+
 
 
 /**
@@ -746,7 +752,6 @@ margin: 0;
        }
     
     }
-
 
 
 .team-list .item {
@@ -1162,16 +1167,16 @@ color: var(--color-white);
     @media screen and (min-width: 768px) {
         display: flex;
         flex-direction: row;
-            --items: 2;
-            width: 768px;
-            justify-content: center;
-        }
+        --items: 2;
+        width: 768px;
+        justify-content: center;
+    }
     
         @media screen and (min-width: 1200px) {
-            flex-direction: row;
-            --items: 3;
-            width: 1200px;
-        }
+        flex-direction: row;
+        --items: 3;
+        width: 1200px;
+    }
 }
 
 
@@ -1188,13 +1193,10 @@ color: var(--color-white);
  }
 }
 
-
-
-
 .portfolio-item {
     outline: none;
     display: block;
-
+    width: 356px;
     transition: box-shadow var(--duration) var(--function);
 }
 
@@ -1209,6 +1211,7 @@ color: var(--color-white);
 
 
 .portfolio-card {
+    width: 100%;
     padding: 32px 16px;
     border: 1px solid var(--color-cornflower);
     border-top: none;
@@ -1269,6 +1272,10 @@ color: var(--color-white);
     color: var(--color-slate);
 }
 
+.portfolio-img {
+    display: flex;
+    margin:  0 auto;
+} 
 /**
   |============================
   | Modal wiev
