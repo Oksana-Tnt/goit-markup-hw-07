@@ -60,7 +60,7 @@ margin: 0;
     padding-left: 16px;
     padding-right: 16px;
 
-    /*@media screen and (min-width: 480px) {
+    @media screen and (min-width: 480px) {
         min-width: 480px;
       }
 
@@ -71,7 +71,7 @@ margin: 0;
       @media screen and (min-width: 1200px) {
         min-width: 1200px;     
                 
-      }*/
+      }
 
 }
 
@@ -233,7 +233,7 @@ margin: 0;
 }
 
 .menu-button {
-    display: inline-flex;
+    display: none;
     margin: 0;
     padding: 0;
     border: none;
