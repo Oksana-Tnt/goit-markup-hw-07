@@ -545,10 +545,6 @@ text-transform: capitalize;
     color: var(--color-slate);
 } 
 
-
-
-
-
 .title {
     margin-bottom: 72px;
     text-align: center;
@@ -648,10 +644,11 @@ text-transform: capitalize;
   |============================
 */
 
-.features-list .item {
+
 @media screen and (min-width: 1200px) {
+    .features-list .item {
     flex-basis: 264px;
-}
+    }
 }
 
 .subtitle {
@@ -663,11 +660,13 @@ text-transform: capitalize;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    text-transform: capitalize;
+    text-transform: capitalize;    
+}
 
-    @media screen and (max-width: 767px) {
-        text-align: center;
-    }
+@media screen and (max-width: 767px) {
+    .subtitle {
+    text-align: center;
+}
 }
 
 .description {
@@ -689,13 +688,15 @@ text-transform: capitalize;
     border-radius: 4px;   
        
     background-color: var(--color-cloud);
-
-    @media screen and (max-width: 1199px) {
-        display: none;
-    }
+   
 }
 
-
+@media screen and (max-width: 1199px) {
+    .svg-icon {
+        display: none;       
+    }
+    
+}
 
 /**
   |============================
