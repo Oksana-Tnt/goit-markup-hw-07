@@ -41,39 +41,39 @@ h1,h2,h3,h4,h5,h6,p {
 margin: 0;
 }
 
-.section {
+.section {   
+
     padding-top: 96px;
-    padding-bottom: 96px;
+    padding-bottom: 96px;       
+     
+}
 
-         
-    
-    @media screen and (min-width: 1200px) {
-        padding-top: 120px;
-        padding-bottom: 120px;
+@media screen and (min-width: 1200px) {
+    .section { 
+    padding-top: 120px;
+    padding-bottom: 120px;
     }
-    
 }
-
-
 .container {  
- 
+    min-width: 320px;
+    max-width: 428px;
+    margin-left: auto;
+    margin-right: auto;    
     padding-left: 16px;
-    padding-right: 16px;
-
-    @media screen and (min-width: 480px) {
-        min-width: 480px;
-      }
-
-     @media screen and (min-width: 768px) {
-        min-width: 768px;
-      }
-
-      @media screen and (min-width: 1200px) {
-        min-width: 1200px;     
-                
-      }
-
+    padding-right: 16px;   
 }
+
+ @media screen and (min-width: 768px) {
+    .container {
+    max-width: 720px;
+    }
+}
+
+  @media screen and (min-width: 1200px) {
+    .container {
+    max-width: 1200px;
+    }            
+  }
 
 .list{
     list-style: none;
@@ -198,11 +198,10 @@ margin: 0;
 */
 
 
-    @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
         .logo-header {
         margin-right: 120px;
     }   
-
 }
 
  @media screen and (min-width: 1200px) {
@@ -260,8 +259,7 @@ margin: 0;
     margin: 0;
     font-size: 20px;   
     background-color: var(--color-white);
-    
-    
+        
 }
    
 @media screen and (max-width: 767px) {
@@ -361,7 +359,6 @@ margin: 0;
  
     transition: transform var(--duration) var(--function),
                 background-color var(--duration) var(--function); 
-
                 
 }  
 
@@ -371,7 +368,6 @@ margin: 0;
         transform: scaleX(1);
         background-color: var(--color-iris);
          
-      
 }
 
 .site-menu .menu:hover::after
@@ -386,8 +382,7 @@ margin: 0;
 .adress{
     display: flex; 
     font-style: normal; 
- 
-    
+     
 }
 
 
@@ -517,11 +512,15 @@ text-transform: capitalize;
     align-items: flex-start;
     gap: 40px;
    
-    @media screen and (min-width: 768px) {
-        display: none;
-    }
+    
 }
 
+@media screen and (min-width: 768px) {
+    .adress-mobile { 
+     display: none;
+        
+    }
+}
 
 .phone {  
     font-weight: 500;
@@ -545,18 +544,6 @@ text-transform: capitalize;
     color: var(--color-slate);
 } 
 
-.title {
-    margin-bottom: 72px;
-    text-align: center;
-
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.1;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-
-    color: var(--color-navy-blue);
-}
 
 /**
   |============================
@@ -565,10 +552,10 @@ text-transform: capitalize;
 */
 
 .hero {
-    max-width: 1440px;
-    min-height: 600px;
-    padding-top: 188px;
-    padding-bottom: 188px;
+    max-width: 100%;
+    min-height: 432px;
+    padding-top: 112px;
+    padding-bottom: 240px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -591,8 +578,12 @@ text-transform: capitalize;
     }
 }
 
-@media (min-width: 489px) {
+@media (min-width: 479px) {
     .hero {
+    max-width: 100%;
+    min-height: 436px;
+    padding-top: 112px;
+    padding-bottom: 204px;   
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/main-page/hero-tablet.jpg);
  
@@ -610,6 +601,10 @@ text-transform: capitalize;
 
 @media (min-width: 769px) {
     .hero {
+    max-width: 100%;
+    min-height: 600px;
+    padding-top: 188px;
+    padding-bottom: 292px;      
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/main-page/hero-desktop.jpg);
     }
@@ -625,56 +620,96 @@ text-transform: capitalize;
 }
 
 .hero-title{
-    max-width: 496px;
-    margin: 0 auto 48px;
+    max-width: 320px;
+    margin: 0 auto 72px;
       
     font-style: normal;
     font-weight: 700;
-    font-size: 56px;
-    line-height: 1.07;
+    font-size: 36px;
+    line-height: 1.11;
     letter-spacing: 0.02em; 
+    text-transform: capitalize;
 
     color: var(--color-white);
 }
 
+@media (min-width: 768px) {
+    .hero-title{
+    max-width: 496px;
+    margin: 0 auto 36px;      
+    font-size: 56px;
+    line-height: 1.07;
+
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .hero-title{
+    max-width: 496px;
+    margin: 0 auto 48px;      
+    font-size: 56px;
+    line-height: 1.07;
+
+    }
+}
 
 /**
   |============================
   | Section Features
-  |============================
-*/
-
-
-@media screen and (min-width: 1200px) {
-    .features-list .item {
-    flex-basis: 264px;
-    }
-}
+  |============================*/
 
 .subtitle {
     margin-top: 0;
     margin-bottom: 8px;
 
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+
+
     color: var(--color-navy-blue);
+    
+}
+
+@media screen and (min-width: 768px) {
+    .subtitle {  
+                    
+    text-align:left;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .subtitle {  
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;    
-}
-
-@media screen and (max-width: 767px) {
-    .subtitle {
-    text-align: center;
-}
+            
+    text-align:left;
+    }
 }
 
 .description {
     margin-top: 0;
     margin-bottom: 0;
-    letter-spacing: 0.02em;
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
+    letter-spacing: 0.02em;
+   
+}
+
+
+@media screen and (min-width: 1200px) {
+    .description {  
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;            
+  
+    }
 }
 
 .svg-icon {
@@ -698,13 +733,15 @@ text-transform: capitalize;
     
 }
 
+
+
 /**
   |============================
   | Card set
   |============================
 */
 
-.features-list,
+
 .team-list {  
 
     @media screen and (min-width: 768px){
