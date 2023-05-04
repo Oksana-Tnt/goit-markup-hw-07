@@ -722,19 +722,18 @@ text-transform: capitalize;
 }
 
 @media screen and (min-width: 768px) {
-    .subtitle {  
-                    
-    text-align:left;
+    .subtitle {                      
+        text-align:left;
     }
 }
 
 @media screen and (min-width: 1200px) {
     .subtitle {  
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-            
-    text-align:left;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+                
+        text-align:left;
     }
 }
 
@@ -750,7 +749,7 @@ text-transform: capitalize;
 
 @media screen and (min-width: 1200px) {
     .description {  
-    font-weight: 400;
+        font-weight: 400;
                
     }
 }
@@ -802,7 +801,7 @@ text-transform: capitalize;
     flex-wrap: wrap;
     margin: 0 auto;
     gap: var(--indent);  
-    justify-content: center;      
+    justify-content:space-between;      
     }
    
 }
@@ -878,7 +877,7 @@ text-transform: capitalize;
 .team-list .item {
     display: flex;
     flex-direction: column;
-   justify-content: center;
+    justify-content: center;
     background-color: var(--color-white);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
@@ -1416,7 +1415,7 @@ text-transform: capitalize;
    
     transition: opacity var(--duration) var(--function);
    
-  }
+  }  
   
   .backdrop.is-hidden {
     opacity: 0;
@@ -1430,17 +1429,27 @@ text-transform: capitalize;
     left: 50%;   
     padding: 24px;
     opacity: 1; 
-   
-      width: 408px;
-      min-height: 584px;
-      background-color: var(--color-dairy);
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-      border-radius: 4px;
+    margin-top: 35px;
+    width: 90%;
+      
+    background-color: var(--color-dairy);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
   
     transform: translate(-50%, -50%) scale(1);
     transition: transform var(--duration) var(--function),
                     opacity var(--duration) var(--function);
-  } 
+  }
+  
+  @media screen and (min-width: 500px) {
+      .modal {
+        
+        width: 408px;
+        
+      }
+
+  }
+  
   
   .backdrop.is-hidden .modal {
       transform: translate(-50%, -50%) scale(0.9);
@@ -1489,7 +1498,6 @@ text-transform: capitalize;
   
   .form-field{
       display: flex;
-      /*width: 100%;*/
       flex-direction: column;
       margin-bottom: 8px;
       position: relative;
