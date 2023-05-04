@@ -1413,8 +1413,8 @@ h1,h2,h3,h4,h5,h6,p {
     background-color: rgba(46, 47, 66, 0.4);
    
     transition: opacity var(--duration) var(--function);
-   
-}  
+}
+
   
   .backdrop.is-hidden {
     opacity: 0;
@@ -1441,14 +1441,10 @@ h1,h2,h3,h4,h5,h6,p {
 }
   
   @media screen and (min-width: 500px) {
-      .modal {
-        
+      .modal {        
          width: 408px;
-        
-      }
-
-}
-  
+    }
+}  
   
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(0.9);
@@ -1473,8 +1469,8 @@ h1,h2,h3,h4,h5,h6,p {
     background-color: var(--color-cornflower);
     color: var(--color-icon);
   
-    fill var(--duration) var(--function);
     transition: background-color var(--duration) var(--function),
+                fill var(--duration) var(--function);
 } 
   
 .btn-close:hover,
