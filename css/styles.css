@@ -21,9 +21,7 @@
 }
 
 body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
+   
     padding-top: 72px;
 
     background-color: var(--color-white);
@@ -72,9 +70,11 @@ h1,h2,h3,h4,h5,h6,p {
     }
 }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1158px) {
     .container {
-        max-width: 1200px;
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
     }            
   }
 
@@ -226,7 +226,7 @@ h1,h2,h3,h4,h5,h6,p {
     }   
 }
 
- @media screen and (min-width: 1200px) {
+ @media screen and (min-width: 1158px) {
      .logo-header {
          margin-right: 76px;
      }
@@ -272,7 +272,7 @@ h1,h2,h3,h4,h5,h6,p {
 
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
     .main-nav {
         margin-left: 156px;
         margin-right: 156px;    
@@ -425,7 +425,7 @@ h1,h2,h3,h4,h5,h6,p {
     
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1158px) {
     .adress-list {
         flex-direction: row;
         gap: 40px;
@@ -447,7 +447,7 @@ h1,h2,h3,h4,h5,h6,p {
 
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1158px) {
     .adress-list .contact {
         font-size: 16px;
         line-height: 1.5;
@@ -615,7 +615,7 @@ h1,h2,h3,h4,h5,h6,p {
     }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 429px) {
     .hero {
         max-width: 100%;
         min-height: 436px;
@@ -681,7 +681,7 @@ h1,h2,h3,h4,h5,h6,p {
 
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1158px) {
     .hero-title{
         max-width: 496px;
         margin: 0 auto 48px;      
@@ -709,16 +709,10 @@ h1,h2,h3,h4,h5,h6,p {
       }
 }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1158px) {
       .features-list {
           --items: 4;
       }
-}
-
-@media screen and (min-width: 1200px) {
-    .features-list > li {
-        max-width: 264px;
-    }
 }
 
 .features-subtitle {
@@ -743,7 +737,7 @@ h1,h2,h3,h4,h5,h6,p {
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
     .features-subtitle {  
         font-weight: 500;
         font-size: 20px;
@@ -762,7 +756,7 @@ h1,h2,h3,h4,h5,h6,p {
    
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
     .features-description{  
         font-weight: 400;               
     }
@@ -781,7 +775,7 @@ h1,h2,h3,h4,h5,h6,p {
    
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1157px) {
     .svg-icon {
         display: none;       
     }
@@ -804,7 +798,6 @@ h1,h2,h3,h4,h5,h6,p {
     gap: 72px 24px;
 }
 
-
 @media screen and (min-width: 768px) {
     .card-set-item {
         width: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
@@ -819,20 +812,16 @@ h1,h2,h3,h4,h5,h6,p {
   |============================
 */
     
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1157px) {
     .section-work {
         display: none;
      }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1157px) {
     .works-list {
         --items: 3;
      }
-}
-
-.works-list >li {
-    max-width: 360px;
 }
 
 
@@ -861,21 +850,28 @@ h1,h2,h3,h4,h5,h6,p {
       }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1158px) {
       .team-list {
           --items: 4;
       }
   }
 
+   
 .team-list > li {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 264px;
+    
     background-color: var(--color-white);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
    
+}
+
+@media screen and (min-width: 320px) and (max-width: 1157px) {
+    .team-list>li {
+        max-width: 264px;
+    }
 }
 
 .team-card {
@@ -891,6 +887,10 @@ h1,h2,h3,h4,h5,h6,p {
     margin-bottom: 8px;
 }
 
+.team-img {
+    display: flex;
+    margin: 0 auto;
+}
 
 /**
   |============================
@@ -943,75 +943,80 @@ h1,h2,h3,h4,h5,h6,p {
   |============================
 */
 
-.list-customers 
-{  
+.list-customers {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     row-gap: 72px;
     column-gap: 16px;
-    --indent: 16px;   
+    --indent: 16px;
     --items: 2;
-}  
-        
- 
+}
+
+
 @media screen and (min-width: 768px) {
     .list-customers {
         row-gap: 72px;
         column-gap: 24px;
-        --indent: 24px;   
-        --items: 3;   
+        --indent: 24px;
+        --items: 3;
     }
-       
+
 }
+
 @media screen and (min-width: 1200px) {
     .list-customers {
         column-gap: 24px;
         --indent: 24px;
         --items: 6;
-        }
-        
     }
 
+}
+
+.customer-card {
+    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+    max-width: 190px;
+    min-height: 88px;
+}
+
+@media screen and (min-width: 768px) {
     .customer-card {
-        flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-
+        max-width: 168px;
+        min-height: 88px;
     }
 
+}
 
-.link-customers{
+.link-customers {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--color-light-slate);    
+    border: 1px solid var(--color-light-slate);
     border-radius: 4px;
     outline: none;
     width: 100%;
+    height: 100%;
     margin: 0 auto;
     color: var(--color-icon);
 
-    transition: color var(--duration) var(--function), 
-         border-color var(--duration) var(--function); 
+    transition: color var(--duration) var(--function),
+        border-color var(--duration) var(--function);
 }
 
 .link-customers:hover,
 .link-customers:focus {
     border-color: var(--color-ocean);
     color: var(--color-ocean);
-   
+
 }
 
 .icon-customers {
-    fill: currentColor; 
-    width: 110px;
-    height: 56px;
+    fill: currentColor;
+   
 }
-@media screen and (min-width: 756px) {
-    .icon-customers {
-        width: 104px;
-        height: 56px;
-    }
-}
+
+
+
 /**
   |============================
   | Footer
@@ -1027,7 +1032,7 @@ h1,h2,h3,h4,h5,h6,p {
     color: var(--color-cloud);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
     .footer {
         padding-top: 100px;
         padding-bottom: 100px;
@@ -1065,14 +1070,14 @@ h1,h2,h3,h4,h5,h6,p {
     .footer-container {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: center;
         gap: 24px;
 
     }
 
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
     .footer-container {
         flex-direction: row;
         flex-wrap: nowrap;
@@ -1166,7 +1171,7 @@ h1,h2,h3,h4,h5,h6,p {
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
     .subscribe-form {
         flex-direction: row;
         align-items: end;
@@ -1247,15 +1252,15 @@ h1,h2,h3,h4,h5,h6,p {
 
 @media screen and (min-width: 768px) {
     .portfolio {
-        padding-top: 48px;
-        padding-bottom: 48px;
+        padding-top: 64px;
+        padding-bottom: 96px;
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
     .portfolio {
-        padding-top: 48px;
-        padding-bottom: 48px;
+        padding-top: 100px;
+        padding-bottom: 120px;
     }
 }
 
@@ -1278,32 +1283,40 @@ h1,h2,h3,h4,h5,h6,p {
       
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
     .portfolio-filters {
         justify-content: center;
         margin-bottom: 72px;
     }
  }
- 
+
+
+ .portfolio-list {
+        --items: 1;
+        gap: 48px;
+        justify-content: center;
+
+    }
 @media screen and (min-width: 768px) {
     .portfolio-list {
-        justify-content: flex-start;
-        row-gap: 72px;
-        column-gap: 24px;
-        --indent: 24px;
+        gap: 72px 24px;
         --items: 2;
     }
 
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
     .portfolio-list {
-        row-gap: 48px;
-        column-gap: 24px;
-        --indent: 24px;
-        --items: 3;
+         gap: 48px 24px;  
+         --items: 3;
     }
 
+}
+
+@media screen and (min-width: 428px) and (max-width: 767px) {
+    .portfolio-list>li {
+        min-width: 396px;
+    }
 }
 
 .portfolio-item { 
