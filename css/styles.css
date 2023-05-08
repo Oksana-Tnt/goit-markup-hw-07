@@ -852,10 +852,15 @@ textarea {
   | Section Works
   |============================
 */
+
+.section-work {
+    padding-top: 0;
+}
     
 @media screen and (max-width: 1157px) {
     .section-work {
         display: none;
+        
      }
 }
 
