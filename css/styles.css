@@ -853,9 +853,12 @@ textarea {
   |============================
 */
 
-.section-work {
-    padding-top: 0;
+@media screen and (min-width: 1158px) {
+    .section-work {
+        padding-top: 0;
+        }
 }
+
     
 @media screen and (max-width: 1157px) {
     .section-work {
